@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_major_collection,major.collection,model_major_collection,group_customer_care_manager,1,1,1,1
+access_major_collection_user,major.collection,model_major_collection,,1,0,0,0
+access_major_collection_categories,major.collection.categories,model_major_collection_categories,group_customer_care_manager,1,1,1,1
+access_major_collection_categories,major.collection.categories,model_major_collection_categories,,1,0,0,0

@@ -1,0 +1,44 @@
+<odoo>
+    <record model="ir.actions.act_window" id="major_collection_categories_action">
+        <field name="name">Quy chế chung</field>
+        <field name="res_model">major.collection.categories</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first major collection categories</p>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_major_collection_categories_tree">
+        <field name="name">view.major.collection.categories.tree</field>
+        <field name="model">major.collection.categories</field>
+        <field name="arch" type="xml">
+            <tree string="Quy chế">
+                <field name="name"/>
+                <!--<field name="categories"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_major_collection_categories_form">
+        <field name="name">view.major.collection.categories.form</field>
+        <field name="model">major.collection.categories</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="%(action_major_collection)d"
+                                type="action"
+                                icon="fa-list">
+                            <span class="o_stat_text">Danh sách</span>
+                        </button>
+                    </div>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

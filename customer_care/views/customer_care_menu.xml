@@ -1,0 +1,9 @@
+<odoo>
+    <!-- Top menu -->
+    <menuitem id="view_customer_care_menu_root" name="Tài liệu tín dụng"/>
+    <!-- Main menu -->
+    <menuitem id="view_customer_care_menu_product" name="Danh sách sản phẩm"
+              parent="view_customer_care_menu_root" sequence="2"/>
+    <menuitem id="view_customer_care_menu_main" name="Quy chế"
+              parent="view_customer_care_menu_root" sequence="3"/>
+</odoo>

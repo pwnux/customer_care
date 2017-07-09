@@ -1,0 +1,79 @@
+<odoo>
+    <record model="ir.actions.act_window" id="major_collection_action">
+        <field name="name">Quy chế chi tiết</field>
+        <field name="res_model">major.collection</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_name':1, 'group_by_name':1}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the first major collection</p>
+        </field>
+    </record>
+    <menuitem id="view_major_collection_detail"
+              name="Quy chế chung"
+              action="major_collection_action"
+              parent="view_customer_care_menu_main"
+              sequence="11"/>
+
+    <record model="ir.ui.view" id="view_major_collection_search">
+        <field name="name">view.major.collection.search</field>
+        <field name="model">major.collection</field>
+        <field name="arch" type="xml">
+            <search string="Chỉ mục">
+                <group expand="0" string="Group by...">
+                    <filter name="name" string="Chỉ mục"
+                            context="{'group_by': 'name'}"/>
+                </group>
+                <field name="key_search"
+                       filter_domain="['|', '|', '|', '|', '|',
+                       ('name', 'like', str(self)+'%'), ('content', 'like', str(self)+'%'),
+                       ('document_reference', 'like', str(self)+'%'),
+                       ('name', 'ilike', ), ('content', 'ilike', self),
+                       ('document_reference', 'ilike', self)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_major_collection_tree">
+        <field name="name">view.major.collection.tree</field>
+        <field name="model">major.collection</field>
+        <field name="arch" type="xml">
+            <tree string="Chỉ mục">
+                <field name="name" string="Chỉ mục" invisible="1"/>
+                <field name="key_search"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_major_collection_form">
+        <field name="name">view.major.collection.form</field>
+        <field name="model">major.collection</field>
+        <field name="arch" type="xml">
+            <form>
+                <group id="short_information">
+                    <field name="name" string="Tên quy chế"/>
+                    <field name="key_search"/>
+                    <field name="question"/>
+                </group>
+                <hr/>
+                <group id="full_information">
+                    <field name="content"/>
+                </group>
+                <hr/>
+                <group>
+                    <field name="document_reference"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!--<record id="action_view_major_collection_form" model="ir.actions.act_window">-->
+        <!--<field name="name">Quy chế</field>-->
+        <!--<field name="res_model">major.collection</field>-->
+        <!--<field name="view_mode">form</field>-->
+        <!--<field name="view_id" ref="view_major_collection_form"/>-->
+        <!--<field name="context">{'default_type': False}</field>-->
+        <!--<field name="target">new</field>-->
+    <!--</record>-->
+
+</odoo>

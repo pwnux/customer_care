@@ -1,0 +1,9 @@
+<odoo>
+    <!-- Top menu -->
+    <menuitem id="raise_capital_root" name="Huy động vốn"/>
+    <!-- Main menu -->
+    <menuitem id="raise_capital_menu_product" name="Huy động vốn"
+              parent="raise_capital_root" sequence="2"/>
+    <!--<menuitem id="view_customer_care_menu_main" name="Quy chế"-->
+              <!--parent="view_customer_care_menu_root" sequence="3"/>-->
+</odoo>

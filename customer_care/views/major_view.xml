@@ -1,0 +1,16 @@
+<odoo>
+    <record id="action_major_collection" model="ir.actions.act_window">
+        <field name="name">Quy chế chi tiết</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">major.collection</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="view_major_collection_tree"/>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{
+                'search_default_name': [active_id],
+                'default_name': active_id,
+            }
+        </field>
+        <field name="domain">[]</field>
+    </record>
+</odoo>
