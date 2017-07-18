@@ -1,0 +1,9 @@
+<odoo>
+    <!-- Top menu -->
+    <menuitem id="view_card_service_menu_root" name="Dịch vụ thẻ"/>
+    <!-- Main menu -->
+    <menuitem id="view_card_service_menu_product" name="Thẻ ghi nợ"
+              parent="view_card_service_menu_root" sequence="2"/>
+    <menuitem id="view_card_credit_menu_product" name="Thẻ tín dụng"
+              parent="view_card_service_menu_root" sequence="3"/>
+</odoo>

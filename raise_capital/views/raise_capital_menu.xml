@@ -1,0 +1,4 @@
+<odoo>
+    <!-- Top menu -->
+    <menuitem id="raise_capital_root" name="Huy động vốn"/>
+</odoo>

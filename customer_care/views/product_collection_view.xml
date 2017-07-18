@@ -35,6 +35,7 @@
                 <group id="short_information">
                     <field name="name" string="Tên sản phẩm"/>
                     <field name="key_search"/>
+                    <field name="key_search_2"/>
                     <field name="question"/>
                 </group>
                 <hr/>
@@ -59,11 +60,13 @@
                             context="{'group_by': 'name'}"/>
                 </group>
                 <field name="key_search"
-                       filter_domain="['|', '|', '|', '|', '|',
+                       filter_domain="['|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
                        ('name', 'like', str(self)+'%'), ('content', 'like', str(self)+'%'),
-                       ('document_reference', 'like', str(self)+'%'),
+                       ('document_reference', 'like', str(self)+'%'), ('question', 'like', str(self)+'%'),
+                       ('key_search', 'like', str(self)+'%'), ('key_search_2', 'like', str(self)+'%'),
                        ('name', 'ilike', self), ('content', 'ilike', self),
-                       ('document_reference', 'ilike', self)]"/>
+                       ('document_reference', 'ilike', self), ('question', 'ilike', self),
+                       ('key_search', 'ilike', self), ('key_search_2', 'ilike', self)]"/>
             </search>
         </field>
     </record>
